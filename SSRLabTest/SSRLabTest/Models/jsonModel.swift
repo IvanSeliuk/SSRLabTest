@@ -15,7 +15,7 @@ struct Model: Codable {
     let point: Point
     let pointName: String
     let visible: Bool
-
+    
     enum CodingKeys: String, CodingKey {
         case id
         case langID = "lang_id"
@@ -32,7 +32,7 @@ struct Point: Codable {
     let lat, lng: Double
     let lat2, lng2: Double?
     let visible: Bool
-
+    
     enum CodingKeys: String, CodingKey {
         case id
         case pointDistrictID = "point_district_id"

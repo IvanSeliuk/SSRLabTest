@@ -11,10 +11,10 @@ import Alamofire
 
 class NetworkManager {
     static let shared = NetworkManager()
-
+    
     func getData(onCompletion: @escaping (JsonModel) -> (),
                  onError: ((String?) -> ())?) {
-
+        
         guard let url = API.map.url else { return }
         AF.request(url).responseDecodable(of: JsonModel.self) { response in
             switch response.result {
